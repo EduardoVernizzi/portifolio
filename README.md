@@ -1,12 +1,28 @@
-# React + Vite
+# Portfólio - Eduardo Vernizzi
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este é o repositório do meu portfólio profissional, desenvolvido com **React + Vite** e hospedado na **Vercel**. O projeto apresenta minhas habilidades, experiências e projetos de forma moderna, responsiva e com animações elegantes.
 
-Currently, two official plugins are available:
+![Preview do site](/img1.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🌐 Acesse o site
 
-## Expanding the ESLint configuration
+🔗 [vernizzidev.vercel.app](https://vernizzidev.vercel.app)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## ✨ Funcionalidades
+
+- Layout responsivo com foco em usabilidade
+- Menu com animações e transições suaves
+- Seção "Sobre mim" com imagem e descrição animada
+- Cards de skills com ícones e textos descritivos
+- Carrossel de projetos em esteira contínua
+- Seção de contato com links diretos para WhatsApp, GitHub e LinkedIn
+- Botão para baixar currículo em PDF
+
+## 🛠️ Tecnologias Utilizadas
+
+- React + Vite
+- CSS3 / Bootstrap 5
+- AOS (Animate On Scroll)
+- React Icons
+- React Fast Marquee
+- Vercel (Deploy)

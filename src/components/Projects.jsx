@@ -34,10 +34,9 @@ export default function Projects() {
           <div
             key={i}
             className="project-card"
-            onClick={() => window.open(proj.link, "_blank")}
-            onTouchStart={() => setPaused(true)}
-            onTouchEnd={() => setPaused(false)}
-            onTouchCancel={() => setPaused(false)}
+            onTouchStart={() => setPaused(true)}   // pausar toque no card
+            onTouchEnd={() => setPaused(false)}    // voltar após toque
+            onTouchCancel={() => setPaused(false)} // caso toque cancelado
           >
             <img
               src={proj.image}
@@ -48,10 +47,7 @@ export default function Projects() {
             <h3 className="project-title">{proj.title}</h3>
             <button
               className="project-button"
-              onClick={(e) => {
-                e.stopPropagation();
-                window.open(proj.link, "_blank");
-              }}
+              onClick={() => window.open(proj.link, "_blank")}
             >
               Ver Projeto
             </button>
