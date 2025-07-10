@@ -2,7 +2,7 @@
 
 Este é o repositório do meu portfólio profissional, desenvolvido com **React + Vite** e hospedado na **Vercel**. O projeto apresenta minhas habilidades, experiências e projetos de forma moderna, responsiva e com animações elegantes.
 
-![Preview do site](/img1.png)
+![Preview do site](./img1.png)
 
 ## 🌐 Acesse o site
 
