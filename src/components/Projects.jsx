@@ -34,9 +34,9 @@ export default function Projects() {
           <div
             key={i}
             className="project-card"
-            onTouchStart={() => setPaused(true)}   // pausar toque no card
-            onTouchEnd={() => setPaused(false)}    // voltar após toque
-            onTouchCancel={() => setPaused(false)} // caso toque cancelado
+            onTouchStart={() => setPaused(true)}   
+            onTouchEnd={() => setPaused(false)}    
+            onTouchCancel={() => setPaused(false)} 
           >
             <img
               src={proj.image}
