@@ -16,7 +16,7 @@ function Header() {
   return (
     <header className="header-main">
       <div className="header-container">
-        <a className="nome-principal" href="#" style={{marginLeft:'20px'}}>CV</a>
+        <a className="nome-principal" href="#" style={{ marginLeft: '20px' }}>CV</a>
 
         <button className="menu-toggle" onClick={toggleNavbar}>
           ☰
@@ -24,7 +24,7 @@ function Header() {
 
         <nav className="nav-desktop">
           <ul>
-            <li><a href="#">Home</a></li>
+            <li><a href="#">Início</a></li>
             <li><a href="#about">Sobre mim</a></li>
             <li><a href="#skills">Habilidades</a></li>
             <li><a href="#projects">Projetos</a></li>
