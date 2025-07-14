@@ -1,8 +1,8 @@
 import React from "react";
-import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa";
 import Typewriter from "typewriter-effect";
 
-function Cta() {
+function Hero() {
   return (
     <section className="hero-section" id="home">
       <div className="hero-content">
@@ -10,7 +10,11 @@ function Cta() {
         <h2>
           <Typewriter
             options={{
-              strings: ["Desenvolvedor Fullstack", "Apaixonado por Tecnologia", "Focado em Resultados"],
+              strings: [
+                "Desenvolvedor Fullstack",
+                "Apaixonado por Tecnologia",
+                "Focado em Resultados",
+              ],
               autoStart: true,
               loop: true,
               delay: 60,
@@ -19,25 +23,41 @@ function Cta() {
           />
         </h2>
 
-        <div className="hero-buttons">
-          <a href="/curriculo.pdf" download className="btn-hero">
+        <div className="social-links">
+          <a
+            href="https://linkedin.com/in/carlosvernizzi"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+          >
+            <FaLinkedin />
+          </a>
+          <a
+            href="https://github.com/EduardoVernizzi/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub"
+          >
+            <FaGithub />
+          </a>
+          <a
+            href="https://wa.me/5511995906506"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="WhatsApp"
+          >
+            <FaWhatsapp />
+          </a>
+        </div>
+
+        <div className="resume-download">
+          <a href="/curriculo.pdf" download className="resume-button">
             Baixar Currículo
           </a>
-          <div className="hero-icons">
-            <a href="mailto:eduardo@email.com" target="_blank" rel="noopener noreferrer">
-              <FaEnvelope />
-            </a>
-            <a href="https://github.com/EduardoVernizzi" target="_blank" rel="noopener noreferrer">
-              <FaGithub />
-            </a>
-            <a href="https://www.linkedin.com/in/eduardo-vernizzi/" target="_blank" rel="noopener noreferrer">
-              <FaLinkedin />
-            </a>
-          </div>
         </div>
       </div>
     </section>
   );
 }
 
-export default Cta;
+export default Hero;
