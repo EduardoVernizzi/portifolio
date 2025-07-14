@@ -19,7 +19,7 @@ const projects = [
       { name: "HTML5", logo: "https://cdn-icons-png.flaticon.com/512/732/732212.png" },
       { name: "CSS3", logo: "https://cdn-icons-png.flaticon.com/512/732/732190.png" },
       { name: "JavaScript", logo: "https://cdn-icons-png.flaticon.com/512/5968/5968292.png" }
-      
+
     ],
     details: "Projeto desenvolvido com JavaScript puro, HTML5 e CSS3, simulando o clássico jogo Flappy Bird."
   },
@@ -34,7 +34,7 @@ const projects = [
       { name: "Firebase", logo: "https://cdn-icons-png.flaticon.com/512/906/906175.png" },
       { name: "CSS3", logo: "https://cdn-icons-png.flaticon.com/512/732/732190.png" },
       { name: "Bootstrap", logo: "https://cdn-icons-png.flaticon.com/512/5968/5968672.png" }
-      
+
     ],
     details: "Sistema desenvolvido em React com backend Firebase para cadastro e gerenciamento de pessoas."
   },
@@ -58,8 +58,8 @@ const projects = [
       { name: "React", logo: "https://cdn-icons-png.flaticon.com/512/919/919851.png" },
       { name: "CSS3", logo: "https://cdn-icons-png.flaticon.com/512/732/732190.png" },
       { name: "Bootstrap", logo: "https://cdn-icons-png.flaticon.com/512/5968/5968672.png" }
-    
-    
+
+
     ],
     details: "Site criado com React, CSS e Bootstrap para uma experiência visual temática e interativa."
   },
@@ -79,7 +79,7 @@ const projects = [
 export default function Projects() {
 
   function showDetails(proj) {
-    const logosHTML = proj.tools.map(tool => 
+    const logosHTML = proj.tools.map(tool =>
       `<img src="${tool.logo}" alt="${tool.name}" title="${tool.name}" style="height:36px; margin-right:8px; border-radius:6px; box-shadow: 0 2px 6px rgba(0,0,0,0.15); background:#fff; padding:4px;">`
     ).join("");
 
@@ -106,7 +106,7 @@ export default function Projects() {
         id="projectsCarousel"
         className="carousel slide"
         data-bs-ride="carousel"
-        data-bs-interval="3000"
+        data-bs-interval="5000"
       >
         <div className="carousel-indicators">
           {projects.map((_, i) => (
