@@ -190,7 +190,8 @@ html {
   font-size: 1.8rem;
   font-family: 'Open Sans', sans-serif;
   margin-bottom: 2rem;
-  min-height: 48px; /* espaço fixo para evitar quebra */
+  min-height: 48px;
+  /* espaço fixo para evitar quebra */
 }
 
 .hero-buttons {
@@ -402,7 +403,6 @@ html {
   background-color: #111;
   color: #fff;
   padding: 6rem 1rem 5rem 1rem;
-  font-family: 'Montserrat', sans-serif;
   min-height: 100vh;
   position: relative;
 }
@@ -448,28 +448,31 @@ html {
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-  background-color: rgba(0, 0, 0, 0.6); /* fundo escuro sutil */
+  background-color: rgba(0, 0, 0, 0.6);
+  /* fundo escuro sutil */
   border-radius: 50%;
   padding: 10px;
 }
 
-/* Texto da legenda */
+
 .carousel-caption h5 {
   font-size: 1.8rem;
   margin-bottom: 0.5rem;
-  font-weight: 700;
+  font-weight: 500;
+  
+
 }
 
 .carousel-caption p {
   font-size: 1.25rem;
   margin-bottom: 1rem;
+  font-weight: 400;
 }
 
 /* Botão na legenda */
 .carousel-caption .btn {
   background-color: #d4af37;
   color: #111;
-  font-weight: 600;
   border-radius: 30px;
   padding: 0.5rem 1.5rem;
   border: none;
@@ -501,7 +504,8 @@ html {
     max-width: 100% !important;
     margin-top: 1rem !important;
     text-align: center;
-    margin-bottom: 2.5rem; /* 🆕 espaço extra abaixo da legenda */
+    margin-bottom: 2.5rem;
+    /* 🆕 espaço extra abaixo da legenda */
   }
 
   .carousel-caption .btn {
@@ -509,11 +513,11 @@ html {
     font-size: 1rem;
     display: inline-block;
     margin-top: 1rem;
-    margin-bottom: 1rem; 
+    margin-bottom: 1rem;
   }
 
   #projects {
-    padding-bottom: 0px !important; 
+    padding-bottom: 0px !important;
   }
 }
 
