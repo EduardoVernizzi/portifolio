@@ -4,10 +4,9 @@
   box-sizing: border-box;
 }
 
-html, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
+body,
+html {
+  height: 100%;
 }
 
 
@@ -25,24 +24,21 @@ html, body {
 
 /*========================== HEADER ===============================*/
 .header-main {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;            /* evita overflow horizontal */
+  position: relative;
   background-color: var(--cor-fundo);
   color: var(--cor-branco);
   padding: 1rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   z-index: 10000;
-  box-sizing: border-box; /* garante que padding não aumente largura */
 }
 
 .header-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1200px;      /* limita largura máxima */
-  margin: 0 auto;         /* centraliza em telas maiores */
-  width: 100%;
 }
 
 .nome-principal {
@@ -81,7 +77,6 @@ html, body {
   padding: 2rem 1rem;
   z-index: 1000;
   box-shadow: 4px 0 6px rgba(0, 0, 0, 0.4);
-  box-sizing: border-box;
 }
 
 .side-menu.open {
@@ -91,7 +86,6 @@ html, body {
 .side-menu ul {
   list-style: none;
   padding: 0;
-  margin: 0;
 }
 
 .side-menu li {
@@ -110,17 +104,18 @@ html, body {
   color: var(--cor-dourado);
 }
 
+
 .backdrop {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%; /* corrigido de 100vw para 100% */
+  width: 100vw;
   height: 100vh;
   background: rgba(0, 0, 0, 0.6);
   z-index: 900;
 }
 
-/* Nav desktop */
+
 .nav-desktop {
   display: none;
 }
@@ -129,11 +124,12 @@ html, body {
   display: flex;
   gap: 2rem;
   list-style: none;
-  margin: 0 1rem;         /* margem lateral reduzida */
+  margin: 0 2rem;
   padding: 0;
   font-size: 1.2rem;
-  flex-wrap: wrap;
 }
+
+
 
 .nav-desktop a {
   color: var(--cor-branco);
@@ -145,6 +141,7 @@ html, body {
 .nav-desktop a:hover {
   color: var(--cor-dourado);
 }
+
 
 @media (min-width: 768px) {
   .menu-toggle {
@@ -162,8 +159,7 @@ html, body {
 }
 
 
-
-/*========================== CHAMADA PRINCIPAL ===============================*/
+/*========================== CHAMADA PRINCIPAL   ===============================*/
 
 .hero-section {
   background-color: var(--cor-fundo);
@@ -174,34 +170,29 @@ html, body {
   align-items: center;
   text-align: center;
   padding: 0 1rem;
-  padding-top: 70px;
-  box-sizing: border-box;  /* evita overflow por padding */
-  overflow-x: hidden;      /* segurança para evitar scroll horizontal */
+  padding-top: 40px;
+
 }
 
-.hero-content > * {
+.hero-content>* {
   opacity: 0;
   transform: translateY(30px);
   animation-fill-mode: forwards;
   animation-name: slideUpFade;
   animation-duration: 0.8s;
   animation-timing-function: ease;
-  max-width: 600px;       /* limite para textos/imagens */
-  margin-left: auto;
-  margin-right: auto;
-  box-sizing: border-box;
 }
 
 /* Animação com delay para cada elemento */
-.hero-content.animate-slide-up > *:nth-child(1) {
+.hero-content.animate-slide-up>*:nth-child(1) {
   animation-delay: 0.2s;
 }
 
-.hero-content.animate-slide-up > *:nth-child(2) {
+.hero-content.animate-slide-up>*:nth-child(2) {
   animation-delay: 0.4s;
 }
 
-.hero-content.animate-slide-up > *:nth-child(3) {
+.hero-content.animate-slide-up>*:nth-child(3) {
   animation-delay: 0.6s;
 }
 
@@ -214,16 +205,11 @@ html, body {
 .hero-content p {
   font-size: 1.3rem;
   margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
   line-height: 1.4;
   color: var(--cor-branco);
-}
-
-/* imagens responsivas */
-.hero-section img,
-.hero-content img {
-  max-width: 100%;
-  height: auto;
-  display: block;
 }
 
 .btn-cta {
@@ -239,8 +225,8 @@ html, body {
 .btn-cta:hover {
   background-color: var(--cor-dourado-claro);
   color: var(--cor-fundo);
-}
 
+}
 
 @keyframes slideUpFade {
   0% {
@@ -253,6 +239,7 @@ html, body {
     transform: translateY(0);
   }
 }
+
 
 /*=================== ABOUT ========================*/
 
@@ -408,99 +395,124 @@ html, body {
 }
 
 /*============================ PROJETOS ======================================*/
-.projects-section {
+#projects {
   background-color: #111;
-  padding: 5rem 1rem 5rem 1rem;
   color: #fff;
-  user-select: none;
-  min-height: auto;
-  box-sizing: border-box;
-  /* Faz o padding entrar dentro do 100vh */
+  padding: 6rem 1rem 5rem 1rem;
+  font-family: 'Montserrat', sans-serif;
+  min-height: 100vh;
+  position: relative;
 }
 
 .projects-title {
-  color: #d4af37;
+  font-size: 2.5rem;
   text-align: center;
   margin-bottom: 2rem;
-  font-weight: 700;
-  font-size: 2.5rem;
-}
-
-.marquee-container {
-  overflow: hidden;
-}
-
-.project-card {
-  margin: 0 20px;
-  background-color: #222;
-  border-radius: 12px;
-  padding: 1rem;
-  width: 280px;
-  box-shadow: 0 0px 25px rgba(0, 0, 0, 0.4);
-  color: #fff;
-  cursor: pointer;
-  user-select: none;
-  flex-shrink: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.project-card:hover {
-
-  box-shadow: 0 12px 20px rgba(212, 175, 55, 0.7);
-}
-
-.project-image {
-  width: 100%;
-  height: 200px; 
-  object-fit: cover; 
-  border-radius: 6px;
-  background-color: transparent; 
-  margin-bottom: 1rem;
-  pointer-events: none;
-  user-select: none;
-}
-
-.project-title {
   color: #d4af37;
-  margin-bottom: 0.5rem;
 }
 
-.project-button {
-  padding: 0.5rem 1.2rem;
-  border-radius: 30px;
-  border: none;
+#projectsCarousel,
+#projectsCarousel .carousel-inner,
+#projectsCarousel .carousel-item {
+  min-height: 60vh;
+  max-height: 75vh;
+  position: relative;
+}
+
+/* Imagem do carrossel */
+#projectsCarousel .carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 30%;
+  border-radius: 12px;
+}
+
+/* Legenda tradicional para desktop */
+.carousel-caption {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  max-width: 90%;
+  margin: 0 auto;
+  background-color: rgba(17, 17, 17, 0.973);
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  color: #d4af37;
+  text-shadow: 0 0 5px #000;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.6); /* fundo escuro sutil */
+  border-radius: 50%;
+  padding: 10px;
+}
+
+/* Texto da legenda */
+.carousel-caption h5 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.carousel-caption p {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+/* Botão na legenda */
+.carousel-caption .btn {
   background-color: #d4af37;
   color: #111;
   font-weight: 600;
-  cursor: pointer;
-  user-select: none;
-  margin-top: auto;
+  border-radius: 30px;
+  padding: 0.5rem 1.5rem;
+  border: none;
   transition: background-color 0.3s ease;
 }
 
-.project-button:hover,
-.project-button:focus {
+.carousel-caption .btn:hover,
+.carousel-caption .btn:focus {
   background-color: #f3d76b;
+  color: #111;
   outline: none;
 }
 
-/* Responsividade */
+/* Botões de navegação */
+.carousel-control-prev,
+.carousel-control-next {
+  filter: invert(90%) sepia(80%) saturate(700%) hue-rotate(35deg);
+}
 
+/* --- MOBILE FIRST --- */
 @media (max-width: 768px) {
-  .project-image {
-    height: 190px; /* ajusta a altura maior */
+  .carousel-caption {
+    position: static !important;
+    background: none !important;
+    color: #d4af37 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    padding: 0 !important;
+    max-width: 100% !important;
+    margin-top: 1rem !important;
+    text-align: center;
+    margin-bottom: 2.5rem; /* 🆕 espaço extra abaixo da legenda */
+  }
+
+  .carousel-caption .btn {
+    padding: 0.6rem 2rem;
+    font-size: 1rem;
+    display: inline-block;
+    margin-top: 1rem;
+    margin-bottom: 2rem; 
+  }
+
+  #projects {
+    padding-bottom: 80px; 
   }
 }
-
-@media (max-width: 480px) {
-  .project-image {
-    height: 170px; /* também aumenta um pouco */
-  }
-}
-
 
 /*========================== CONTACT ============================*/
 
