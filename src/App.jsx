@@ -1,8 +1,8 @@
-import { StrictMode } from 'react'
+import React, { useEffect } from "react";
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { useEffect } from 'react';
+
 
 
 import Header from './components/Header'
@@ -19,20 +19,20 @@ function App() {
   useEffect(() => {
     AOS.init({
       duration: 1000,
-      once: true, 
+      once: true,
     });
   }, []);
 
 
   return (
     <>
-    <Header/>
-    <Cta/>
-    <About/>
-    <Skills/>
-    <Projects/>
-    <Contact/>
-     
+      <Header />
+      <Cta />
+      <About />
+      <Skills />
+      <Projects />
+      <Contact />
+
     </>
   )
 }
