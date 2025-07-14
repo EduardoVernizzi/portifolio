@@ -4,9 +4,10 @@
   box-sizing: border-box;
 }
 
-body,
-html {
-  height: 100%;
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
 }
 
 
@@ -24,21 +25,24 @@ html {
 
 /*========================== HEADER ===============================*/
 .header-main {
-  position: relative;
-  background-color: var(--cor-fundo);
-  color: var(--cor-branco);
-  padding: 1rem;
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100%;            /* evita overflow horizontal */
+  background-color: var(--cor-fundo);
+  color: var(--cor-branco);
+  padding: 1rem;
   z-index: 10000;
+  box-sizing: border-box; /* garante que padding não aumente largura */
 }
 
 .header-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  max-width: 1200px;      /* limita largura máxima */
+  margin: 0 auto;         /* centraliza em telas maiores */
+  width: 100%;
 }
 
 .nome-principal {
@@ -77,6 +81,7 @@ html {
   padding: 2rem 1rem;
   z-index: 1000;
   box-shadow: 4px 0 6px rgba(0, 0, 0, 0.4);
+  box-sizing: border-box;
 }
 
 .side-menu.open {
@@ -86,6 +91,7 @@ html {
 .side-menu ul {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 .side-menu li {
@@ -104,18 +110,17 @@ html {
   color: var(--cor-dourado);
 }
 
-
 .backdrop {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
+  width: 100%; /* corrigido de 100vw para 100% */
   height: 100vh;
   background: rgba(0, 0, 0, 0.6);
   z-index: 900;
 }
 
-
+/* Nav desktop */
 .nav-desktop {
   display: none;
 }
@@ -124,12 +129,11 @@ html {
   display: flex;
   gap: 2rem;
   list-style: none;
-  margin: 0 2rem;
+  margin: 0 1rem;         /* margem lateral reduzida */
   padding: 0;
   font-size: 1.2rem;
+  flex-wrap: wrap;
 }
-
-
 
 .nav-desktop a {
   color: var(--cor-branco);
@@ -141,7 +145,6 @@ html {
 .nav-desktop a:hover {
   color: var(--cor-dourado);
 }
-
 
 @media (min-width: 768px) {
   .menu-toggle {
@@ -159,7 +162,8 @@ html {
 }
 
 
-/*========================== CHAMADA PRINCIPAL   ===============================*/
+
+/*========================== CHAMADA PRINCIPAL ===============================*/
 
 .hero-section {
   background-color: var(--cor-fundo);
@@ -171,28 +175,33 @@ html {
   text-align: center;
   padding: 0 1rem;
   padding-top: 70px;
-
+  box-sizing: border-box;  /* evita overflow por padding */
+  overflow-x: hidden;      /* segurança para evitar scroll horizontal */
 }
 
-.hero-content>* {
+.hero-content > * {
   opacity: 0;
   transform: translateY(30px);
   animation-fill-mode: forwards;
   animation-name: slideUpFade;
   animation-duration: 0.8s;
   animation-timing-function: ease;
+  max-width: 600px;       /* limite para textos/imagens */
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
 }
 
 /* Animação com delay para cada elemento */
-.hero-content.animate-slide-up>*:nth-child(1) {
+.hero-content.animate-slide-up > *:nth-child(1) {
   animation-delay: 0.2s;
 }
 
-.hero-content.animate-slide-up>*:nth-child(2) {
+.hero-content.animate-slide-up > *:nth-child(2) {
   animation-delay: 0.4s;
 }
 
-.hero-content.animate-slide-up>*:nth-child(3) {
+.hero-content.animate-slide-up > *:nth-child(3) {
   animation-delay: 0.6s;
 }
 
@@ -205,11 +214,16 @@ html {
 .hero-content p {
   font-size: 1.3rem;
   margin-bottom: 2rem;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
   line-height: 1.4;
   color: var(--cor-branco);
+}
+
+/* imagens responsivas */
+.hero-section img,
+.hero-content img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
 .btn-cta {
@@ -225,8 +239,8 @@ html {
 .btn-cta:hover {
   background-color: var(--cor-dourado-claro);
   color: var(--cor-fundo);
-
 }
+
 
 @keyframes slideUpFade {
   0% {
@@ -239,7 +253,6 @@ html {
     transform: translateY(0);
   }
 }
-
 
 /*=================== ABOUT ========================*/
 
