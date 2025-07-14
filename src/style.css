@@ -162,84 +162,87 @@ html {
 /*========================== CHAMADA PRINCIPAL   ===============================*/
 
 .hero-section {
-  background-color: var(--cor-fundo);
-  color: var(--cor-branco);
+  background: #111;
+  color: #fff;
   min-height: 100vh;
+  padding: 6rem 1rem 4rem 1rem;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   text-align: center;
-  padding: 0 1rem;
-  padding-top: 40px;
-
 }
 
-.hero-content>* {
-  opacity: 0;
-  transform: translateY(30px);
-  animation-fill-mode: forwards;
-  animation-name: slideUpFade;
-  animation-duration: 0.8s;
-  animation-timing-function: ease;
+.hero-content {
+  max-width: 800px;
+  margin: auto;
+  padding: 2rem;
 }
 
-/* Animação com delay para cada elemento */
-.hero-content.animate-slide-up>*:nth-child(1) {
-  animation-delay: 0.2s;
-}
-
-.hero-content.animate-slide-up>*:nth-child(2) {
-  animation-delay: 0.4s;
-}
-
-.hero-content.animate-slide-up>*:nth-child(3) {
-  animation-delay: 0.6s;
-}
-
-.hero-content h1 {
-  font-size: 3rem;
-  color: var(--cor-dourado);
-  margin-bottom: 1rem;
-}
-
-.hero-content p {
-  font-size: 1.3rem;
-  margin-bottom: 2rem;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-  line-height: 1.4;
-  color: var(--cor-branco);
-}
-
-.btn-cta {
-  background-color: var(--cor-dourado);
-  color: var(--cor-fundo);
-  padding: 0.8rem 2rem;
+.hero-section h1 {
+  font-size: 2.8rem;
   font-weight: 700;
-  border-radius: 50px;
+  color: #d4af37;
+  margin-bottom: 1rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.hero-section h2 {
+  font-size: 1.8rem;
+  font-family: 'Open Sans', sans-serif;
+  margin-bottom: 2rem;
+  min-height: 48px; /* espaço fixo para evitar quebra */
+}
+
+.hero-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.btn-hero {
+  background-color: #d4af37;
+  color: #111;
+  font-weight: 600;
+  padding: 0.7rem 2rem;
+  border-radius: 30px;
   text-decoration: none;
   transition: background-color 0.3s ease;
 }
 
-.btn-cta:hover {
-  background-color: var(--cor-dourado-claro);
-  color: var(--cor-fundo);
-
+.btn-hero:hover {
+  background-color: #f3d76b;
 }
 
-@keyframes slideUpFade {
-  0% {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.hero-icons {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 2.5rem;
 }
 
+.hero-icons a {
+  color: #fff;
+  transition: color 0.3s;
+}
+
+.hero-icons a:hover {
+  color: #d4af37;
+}
+
+@media (max-width: 768px) {
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+
+  .hero-section h2 {
+    font-size: 1.2rem;
+  }
+
+  .hero-icons {
+    gap: 1rem;
+    font-size: 1.5rem;
+  }
+}
 
 /*=================== ABOUT ========================*/
 
@@ -510,7 +513,7 @@ html {
   }
 
   #projects {
-    padding-bottom: 80px; 
+    padding-bottom: 40px; 
   }
 }
 

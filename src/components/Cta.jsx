@@ -1,46 +1,40 @@
-import { StrictMode } from "react";
-
-
-
-import { useEffect, useRef, useState } from "react";
+import React from "react";
+import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import Typewriter from "typewriter-effect";
 
 function Cta() {
-  const [isVisible, setIsVisible] = useState(false);
-  const textRef = useRef(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          observer.disconnect();
-        }
-      },
-      {
-        threshold: 0.3,
-      }
-    );
-
-    if (textRef.current) {
-      observer.observe(textRef.current);
-    }
-
-    return () => {
-      if (textRef.current) observer.unobserve(textRef.current);
-    };
-  }, []);
-
   return (
-    <section className="hero-section">
-      <div
-        ref={textRef}
-        className={`hero-content ${isVisible ? "animate-slide-up" : ""}`}
-      >
-        <h1>Bem-vindo ao meu portfólio</h1>
-        <p>Transformando ideias em experiências digitais elegantes e funcionais.</p>
-        <a href="#about" className="btn-cta">
-          Ver Mais
-        </a>
+    <section className="hero-section" id="home">
+      <div className="hero-content">
+        <h1>Carlos Eduardo Vernizzi</h1>
+        <h2>
+          <Typewriter
+            options={{
+              strings: ["Desenvolvedor Fullstack", "Apaixonado por Tecnologia", "Focado em Resultados"],
+              autoStart: true,
+              loop: true,
+              delay: 60,
+              deleteSpeed: 40,
+            }}
+          />
+        </h2>
+
+        <div className="hero-buttons">
+          <a href="/curriculo.pdf" download className="btn-hero">
+            Baixar Currículo
+          </a>
+          <div className="hero-icons">
+            <a href="mailto:eduardo@email.com" target="_blank" rel="noopener noreferrer">
+              <FaEnvelope />
+            </a>
+            <a href="https://github.com/EduardoVernizzi" target="_blank" rel="noopener noreferrer">
+              <FaGithub />
+            </a>
+            <a href="https://www.linkedin.com/in/eduardo-vernizzi/" target="_blank" rel="noopener noreferrer">
+              <FaLinkedin />
+            </a>
+          </div>
+        </div>
       </div>
     </section>
   );
