@@ -561,7 +561,7 @@ html {
 
 @media (max-width: 768px) {
   .contact-section {
-    padding: 2rem 1rem;
+    padding: 0rem 1rem;
   }
 
   .contact-section h2 {
