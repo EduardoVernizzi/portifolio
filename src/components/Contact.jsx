@@ -3,7 +3,7 @@ import { FaLinkedin, FaGithub, FaWhatsapp } from 'react-icons/fa';
 export default function Contact() {
   return (
     <section className="contact-section" id="contact">
-      <h2>Contatos</h2>
+      <h2>Conecte-se comigo</h2>
       <p style={{fontWeight: "400"}}>Quer trocar uma ideia, colaborar ou só dar um oi? Me chama nas redes!</p>
       <div className="social-links">
         <a href="https://linkedin.com/in/carlosvernizzi" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
