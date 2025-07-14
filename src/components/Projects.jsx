@@ -12,13 +12,13 @@ const projects = [
   {
     title: "Flappy Bird",
     image: projeto1,
-    description: "Jogo estilo Flappy Bird criado com JavaScript.",
+    description: "Clone do jogo Flappy Bird criado com JavaScript",
     link: "https://eduardovernizzi.github.io/projeto-flappy-bird/",
   },
   {
     title: "Cadastro 360",
     image: projeto4,
-    description: "Sistema completo de cadastro e gerenciamento.",
+    description: "Sistema completo de cadastro e gerenciamento de pessoas",
     link: "https://eduardovernizzi.github.io/projeto-cadastro360/",
   },
   {
@@ -30,13 +30,13 @@ const projects = [
   {
     title: "Mundo Mágico",
     image: projeto3,
-    description: "Site temático inspirado em Harry Potter.",
+    description: "Site temático inspirado em Harry Potter",
     link: "https://eduardovernizzi.github.io/projeto-harry/",
   },
   {
     title: "Calculadora",
     image: projeto5,
-    description: "Calculadora funcional feita em JavaScript.",
+    description: "Calculadora funcional feita em React",
     link: "https://eduardovernizzi.github.io/projeto-calculadora/",
   },
 ];
