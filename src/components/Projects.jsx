@@ -50,7 +50,7 @@ const projects = [
       { name: "GSAP", logo: "https://cdn-icons-png.flaticon.com/512/5968/5968371.png" },
       { name: "Framer Motion", logo: "https://cdn-icons-png.flaticon.com/512/5968/5968381.png" }
     ],
-    details: "Site profissional ficticio com foco em criar um site elegante para um restaurante italiano"
+    details: "Um site fictício com foco em criar um design elegante para um restaurante italiano."
   },
   {
     title: "Mundo Mágico",
