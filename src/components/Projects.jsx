@@ -48,7 +48,8 @@ const projects = [
       { name: "CSS3", logo: "https://cdn-icons-png.flaticon.com/512/732/732190.png" },
       { name: "Bootstrap", logo: "https://cdn-icons-png.flaticon.com/512/5968/5968672.png" },
       { name: "GSAP", logo: "https://cdn-icons-png.flaticon.com/512/5968/5968371.png" },
-      { name: "Framer Motion", logo: "https://cdn-icons-png.flaticon.com/512/5968/5968381.png" }
+      { name: "Framer Motion", logo: "https://cdn-icons-png.flaticon.com/512/5968/5968381.png" },
+      { name: "Sass", logo: "https://cdn-icons-png.flaticon.com/512/5968/5968358.png" }
     ],
     details: "Um site fictício com foco em criar um design elegante para um restaurante italiano."
   },
