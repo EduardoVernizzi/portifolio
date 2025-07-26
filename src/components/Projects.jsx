@@ -3,11 +3,11 @@ import Swal from "sweetalert2";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
-import projeto1 from "../assets/projeto1.png";
-import projeto2 from "../assets/projeto2.png";
-import projeto3 from "../assets/projeto3.png";
-import projeto4 from "../assets/projeto4.png";
-import projeto5 from "../assets/projeto5.png";
+import projeto1 from "../assets/flappy.png";
+import projeto2 from "../assets/trattoria.png";
+import projeto3 from "../assets/harry.png";
+import projeto4 from "../assets/cadastro360.png";
+import projeto5 from "../assets/calculadora.png";
 
 const projects = [
   {
@@ -39,15 +39,18 @@ const projects = [
     details: "Sistema desenvolvido em React com backend Firebase para cadastro e gerenciamento de pessoas."
   },
   {
-    title: "To Do List",
+    title: "Trattoria Vernizzi",
     image: projeto2,
-    description: "Aplicativo para gerenciamento de tarefas.",
-    link: "https://eduardovernizzi.github.io/projeto-tipsKeeper/",
+    description: "Site profissional de um restaurante Italiano",
+    link: "https://trattoria-vernizzi.vercel.app/",
     tools: [
       { name: "React", logo: "https://cdn-icons-png.flaticon.com/512/919/919851.png" },
-      { name: "CSS3", logo: "https://cdn-icons-png.flaticon.com/512/732/732190.png" }
+      { name: "CSS3", logo: "https://cdn-icons-png.flaticon.com/512/732/732190.png" },
+      { name: "Bootstrap", logo: "https://cdn-icons-png.flaticon.com/512/5968/5968672.png" },
+      { name: "GSAP", logo: "https://cdn-icons-png.flaticon.com/512/5968/5968371.png" },
+      { name: "Framer Motion", logo: "https://cdn-icons-png.flaticon.com/512/5968/5968381.png" }
     ],
-    details: "Aplicativo simples para organizar tarefas diárias usando React e CSS"
+    details: "Site profissional ficticio com foco em criar um site elegante para um restaurante italiano"
   },
   {
     title: "Mundo Mágico",
@@ -57,9 +60,7 @@ const projects = [
     tools: [
       { name: "React", logo: "https://cdn-icons-png.flaticon.com/512/919/919851.png" },
       { name: "CSS3", logo: "https://cdn-icons-png.flaticon.com/512/732/732190.png" },
-      { name: "Bootstrap", logo: "https://cdn-icons-png.flaticon.com/512/5968/5968672.png" }
-
-
+      { name: "Bootstrap", logo: "https://cdn-icons-png.flaticon.com/512/5968/5968672.png" },
     ],
     details: "Site criado com React, CSS e Bootstrap para uma experiência visual temática e interativa."
   },
