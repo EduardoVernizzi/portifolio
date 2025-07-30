@@ -42,6 +42,7 @@
 }
 
 .menu-toggle {
+  display: block !important; /* garante visibilidade em mobile/tablet */
   font-size: 2rem;
   background: none;
   border: none;
@@ -103,7 +104,7 @@
 }
 
 .nav-desktop {
-  display: none;
+  display: none !important; /* esconde por padrão para mobile */
 }
 
 .nav-desktop ul {
@@ -126,24 +127,38 @@
   }
 }
 
-@media (min-width: 768px) {
+/* Media queries */
+
+@media (max-width: 768px) {
   .menu-toggle {
-    display: none;
+    display: block !important;
+  }
+
+  .nav-desktop {
+    display: none !important;
   }
 
   .side-menu,
   .backdrop {
-    display: none;
+    display: block !important;
+  }
+
+  .nome-principal span {
+    color: $cor-accento !important;
+  }
+}
+
+@media (min-width: 769px) {
+  .menu-toggle {
+    display: none !important;
   }
 
   .nav-desktop {
-    display: block;
+    display: block !important;
   }
 
-}
-
-@media (max-width:768px) {
-  .nome-principal span{
-    color: $cor-accento !important;
+  .side-menu,
+  .backdrop {
+    display: none !important;
   }
 }

@@ -1,4 +1,3 @@
-
 @use 'sass:color';
 @use 'variables' as *;
 
@@ -23,13 +22,17 @@
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+
+  /* Remova qualquer altura fixa */
+  height: auto;
+  width: 100%; /* importante para tablets */
 }
 
 .about-image img {
-  width: 100%;
-  height: auto;
+  width: 100%;  /* ocupa toda largura do container */
+  height: auto; /* mantém proporção natural */
   display: block;
-  object-fit: cover;
+  object-fit: cover; /* desktop: cobre todo o container */
 }
 
 .about-text {
@@ -56,6 +59,7 @@
   .about-container {
     flex-direction: column;
     text-align: center;
+    align-items: center;  
   }
 
   .about-section {
@@ -68,7 +72,15 @@
   }
 
   .about-image {
-    max-width: 80%;
+    max-width: 100%;   /* ocupa toda largura disponível */
     margin: 0 auto 2rem;
+    height: auto !important; /* força altura automática */
+    flex-basis: auto !important; /* evita restrição de base flex */
+  }
+
+  .about-image img {
+    object-fit: contain !important; /* imagem inteira, sem corte */
+    width: 100% !important;
+    height: auto !important;
   }
 }
