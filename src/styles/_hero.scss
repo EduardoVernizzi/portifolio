@@ -73,9 +73,11 @@
       &[aria-label='GitHub'] {
         color: #333 !important;
       }
+
       &[aria-label='LinkedIn'] {
         color: #0A66C2 !important;
       }
+
       &[aria-label='WhatsApp'] {
         color: #25D366 !important;
       }
@@ -95,5 +97,27 @@
   .hero-icons {
     gap: 1rem;
     font-size: 1.5rem;
+  }
+
+  a {
+    // No mobile/tablet a cor base já é a cor da rede social
+    color: unset !important; // remove o cinza do desktop
+
+    &[aria-label='GitHub'] {
+      color: #333 !important;
+    }
+
+    &[aria-label='LinkedIn'] {
+      color: #0A66C2 !important;
+    }
+
+    &[aria-label='WhatsApp'] {
+      color: #25D366 !important;
+    }
+
+    // Remove o hover porque não tem efeito no mobile, mas pode manter para desktop
+    &:hover {
+      color: inherit !important;
+    }
   }
 }
