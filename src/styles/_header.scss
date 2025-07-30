@@ -1,0 +1,142 @@
+@use 'sass:color';
+@use 'variables' as *;
+
+.header-main {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: $cor-branco;
+  color: $cor-texto;
+  padding: 1rem;
+  z-index: 10000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nome-principal {
+  font-family: 'Fira Code', monospace;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: $cor-accento;
+  margin-left: 20px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+
+  span {
+    color: $cor-texto;
+  }
+
+  &:hover {
+    color: $cor-texto;
+
+    span {
+      color: $cor-accento;
+    }
+  }
+}
+
+.menu-toggle {
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: $cor-texto;
+  cursor: pointer;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: $cor-accento;
+  }
+}
+
+.side-menu {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100vh;
+  background-color: $cor-branco;
+  transition: left 0.3s ease;
+  padding: 2rem 1rem;
+  z-index: 1000;
+  box-shadow: 4px 0 6px rgba(0, 0, 0, 0.1);
+}
+
+.side-menu.open {
+  left: 0;
+}
+
+.side-menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.side-menu li {
+  margin: 1.5rem 0;
+}
+
+.side-menu a {
+  color: $cor-texto;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 400;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: $cor-accento;
+  }
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.1);
+  z-index: 900;
+}
+
+.nav-desktop {
+  display: none;
+}
+
+.nav-desktop ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0 2rem;
+  padding: 0;
+  font-size: 1.2rem;
+}
+
+.nav-desktop a {
+  color: $cor-texto;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: $cor-accento;
+  }
+}
+
+@media (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+
+  .side-menu,
+  .backdrop {
+    display: none;
+  }
+
+  .nav-desktop {
+    display: block;
+  }
+}

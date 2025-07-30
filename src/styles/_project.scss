@@ -1,0 +1,117 @@
+@use 'sass:color';
+@use 'variables' as *;
+
+#projects {
+  background-color: $cor-branco;
+  color: $cor-texto;
+  padding: 6rem 1rem 5rem 1rem;
+  min-height: 100vh;
+  position: relative;
+}
+
+.projects-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+  color: $cor-texto;
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+#projectsCarousel,
+#projectsCarousel .carousel-inner,
+#projectsCarousel .carousel-item {
+  min-height: 60vh;
+  max-height: 75vh;
+  position: relative;
+}
+
+#projectsCarousel .carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 30%;
+  border-radius: 12px;
+}
+
+.carousel-caption {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  max-width: 90%;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  color: $cor-texto !important;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(74, 144, 226, 0.6);
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.carousel-caption h5 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: $cor-accento;
+}
+
+.carousel-caption p {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  font-weight: 400;
+  color: $cor-texto;
+}
+
+.carousel-caption .btn {
+  background-color: $cor-accento;
+  color: $cor-branco;
+  border-radius: 30px;
+  padding: 0.5rem 1.5rem;
+  border: none;
+  transition: background-color 0.3s ease;
+
+  &:hover,
+  &:focus {
+    background-color: $cor-accento-claro;
+    color: $cor-branco;
+    outline: none;
+  }
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  filter: none;
+}
+
+@media (max-width: 768px) {
+  .carousel-caption {
+    position: static !important;
+    background: none !important;
+    color: $cor-texto !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    max-width: 100% !important;
+    margin-top: 1rem !important;
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+
+  .carousel-caption .btn {
+    padding: 0.6rem 2rem;
+    font-size: 1rem;
+    display: inline-block;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  #projects {
+    padding-bottom: 0 !important;
+  }
+}

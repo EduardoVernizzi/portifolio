@@ -1,0 +1,99 @@
+@use 'sass:color';
+@use 'variables' as *;
+
+.hero-section {
+  background: $cor-branco;
+  color: $cor-texto;
+  min-height: 100vh;
+  padding: 6rem 1rem 4rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: auto;
+  padding: 2rem;
+}
+
+.hero-section h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: $cor-texto;
+  margin-bottom: 1rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.hero-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  min-height: 48px;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.btn-hero {
+  background-color: $cor-accento;
+  color: $cor-branco;
+  font-weight: 600;
+  padding: 0.7rem 2rem;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: $cor-accento-claro;
+  }
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+
+  a {
+    color: #0000008a !important;
+    transition: color 0.3s ease;
+
+    svg {
+      fill: currentColor;
+      transition: fill 0.3s ease;
+    }
+
+    &:hover {
+      &[aria-label='GitHub'] {
+        color: #333 !important;
+      }
+      &[aria-label='LinkedIn'] {
+        color: #0A66C2 !important;
+      }
+      &[aria-label='WhatsApp'] {
+        color: #25D366 !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+
+  .hero-section h2 {
+    font-size: 1.2rem;
+  }
+
+  .hero-icons {
+    gap: 1rem;
+    font-size: 1.5rem;
+  }
+}

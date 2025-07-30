@@ -16,7 +16,9 @@ function Header() {
   return (
     <header className="header-main">
       <div className="header-container">
-        <a className="nome-principal" href="#" style={{ marginLeft: '20px' }}>CV</a>
+        <a className="nome-principal" href="#">
+          &lt;Carlos <span>Vernizzi</span>/&gt;
+        </a>
 
         <button className="menu-toggle" onClick={toggleNavbar}>
           ☰

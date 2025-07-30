@@ -1,0 +1,77 @@
+@use 'sass:color';
+@use 'variables' as *;
+
+.contact-section {
+  background-color: $cor-branco;
+  color: $cor-texto;
+  margin-top: 0;
+  padding-bottom: 3rem;
+  text-align: center;
+}
+
+.contact-section h2 {
+  font-size: 2.5rem;
+  color: $cor-texto;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.contact-section p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: color.adjust($cor-texto, $lightness: -10%);
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  font-size: 2.5rem;
+}
+
+.social-links a {
+  color: $cor-accento;
+  transition: color 0.3s ease;
+
+  &:hover,
+  &:focus {
+    color: $cor-accento-claro;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 0 1rem 3rem 1rem;
+  }
+
+  .contact-section h2 {
+    font-size: 2.5rem;
+  }
+
+  .social-links {
+    font-size: 2rem;
+    gap: 1rem;
+  }
+}
+
+.resume-download {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.resume-button {
+  background-color: $cor-accento;
+  color: $cor-branco;
+  padding: 0.6rem 1.5rem;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover,
+  &:focus {
+    background-color: $cor-accento-claro;
+  }
+}
