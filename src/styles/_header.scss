@@ -139,4 +139,11 @@
   .nav-desktop {
     display: block;
   }
+
+}
+
+@media (max-width:768px) {
+  .nome-principal span{
+    color: $cor-accento !important;
+  }
 }
