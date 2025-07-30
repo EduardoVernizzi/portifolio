@@ -90,6 +90,10 @@
   filter: none;
 }
 
+.carousel-indicators [data-bs-target]{
+  background-color: $cor-accento !important;
+}
+
 @media (max-width: 768px) {
   .carousel-caption {
     position: static !important;
