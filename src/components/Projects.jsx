@@ -7,7 +7,7 @@ import projeto1 from "../assets/flappy.png";
 import projeto2 from "../assets/trattoria.png";
 import projeto3 from "../assets/harry.png";
 import projeto4 from "../assets/cadastro360.png";
-import projeto5 from "../assets/calculadora.png";
+import projeto5 from "../assets/taskManager.png";
 
 const projects = [
   {
@@ -66,15 +66,16 @@ const projects = [
     details: "Site criado com React, CSS e Bootstrap para uma experiência visual temática e interativa."
   },
   {
-    title: "Calculadora",
+    title: "TaskManager",
     image: projeto5,
-    description: "Calculadora funcional feita em React",
-    link: "https://eduardovernizzi.github.io/projeto-calculadora/",
+    description: "Gerenciador de tarefas",
+    link: "https://vernizziTask.vercel.app/",
     tools: [
       { name: "React", logo: "https://cdn-icons-png.flaticon.com/512/919/919851.png" },
-      { name: "CSS3", logo: "https://cdn-icons-png.flaticon.com/512/732/732190.png" }
+      { name: "CSS3", logo: "https://cdn-icons-png.flaticon.com/512/732/732190.png" },
+      { name: "Sass", logo: "https://cdn-icons-png.flaticon.com/512/5968/5968358.png" }
     ],
-    details: "Calculadora feita com React, com design responsivo e funcional."
+    details: "Aplicativo de tarefas com consumo de API para previsão do tempo e geolocalização."
   },
 ];
 
