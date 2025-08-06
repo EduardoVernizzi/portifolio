@@ -51,7 +51,7 @@ function Hero() {
         </div>
 
         <div className="resume-download">
-          <a href="/curriculo.pdf" download className="resume-button">
+          <a href="/Curriculo.pdf" download className="resume-button">
             Baixar Currículo
           </a>
         </div>
