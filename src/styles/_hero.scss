@@ -5,7 +5,7 @@
   background: $cor-branco;
   color: $cor-texto;
   min-height: 100vh;
-  padding: 6rem 1rem 4rem 1rem;
+  padding: 5rem 1rem 4rem 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -23,13 +23,14 @@
   font-weight: 700;
   color: $cor-texto;
   margin-bottom: 1rem;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Fira Code', monospace;
 }
 
 .hero-section h2 {
   font-size: 1.8rem;
   margin-bottom: 2rem;
   min-height: 48px;
+  font-family: 'Fira Code', monospace;
 }
 
 .hero-buttons {
@@ -47,6 +48,7 @@
   border-radius: 30px;
   text-decoration: none;
   transition: background-color 0.3s ease;
+  font-family: 'Fira Code', monospace;
 
   &:hover {
     background-color: $cor-accento-claro;

@@ -4,83 +4,123 @@
 .about-section {
   background-color: $cor-branco;
   color: $cor-texto;
-  padding: 6rem 1rem 4rem 1rem;
-}
-
-.about-container {
+  padding: 5rem 1rem 4rem 1rem;
   max-width: 1100px;
   margin: 0 auto;
-  display: flex;
-  align-items: center;
-  gap: 3rem;
-  flex-wrap: wrap;
+  font-family: 'Fira Code', monospace;
 }
 
-.about-image {
-  flex: 1 1 300px;
-  max-width: 400px;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-
-  /* Remova qualquer altura fixa */
-  height: auto;
-  width: 100%; /* importante para tablets */
-}
-
-.about-image img {
-  width: 100%;  /* ocupa toda largura do container */
-  height: auto; /* mantém proporção natural */
-  display: block;
-  object-fit: cover; /* desktop: cobre todo o container */
-}
-
-.about-text {
-  flex: 2 1 400px;
-  text-align: justify;
-}
-
-.about-text h2 {
+.about-title {
   font-size: 2.5rem;
-  color: $cor-texto;
-  margin-bottom: 1.5rem;
   font-weight: 700;
-  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 3rem;
+  text-align: center;
+  color: $cor-texto;
 }
 
-.about-text p {
-  font-size: 1.15rem;
-  line-height: 1.6;
-  margin-bottom: 1.2rem;
-  color: color.adjust($cor-texto, $lightness: -15%);
-}
+.about-content {
+  display: flex;
+  gap: 2.5rem;
+  align-items: stretch; // faz as colunas terem a mesma altura
 
-@media (max-width: 768px) {
-  .about-container {
+  @media (max-width: 768px) {
     flex-direction: column;
+  }
+}
+
+.about-main-card {
+  flex: 2;
+  background: $cor-branco;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  color: $cor-texto;
+
+  .about-img {
+    width: 100%;
+    max-width: 350px;
+    border-radius: 12px;
+    align-self: center;
+    object-fit: cover;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  }
+
+  .about-text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: color.adjust($cor-texto, $lightness: -15%);
+  }
+}
+
+.about-cards {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  @media (max-width: 768px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .about-card {
+    background: $cor-branco;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+    border-radius: 12px;
+    padding: 1.8rem 1.5rem;
+    flex: 1;
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     text-align: center;
-    align-items: center;  
-  }
+    color: $cor-texto;
+    transition: box-shadow 0.3s ease;
 
-  .about-section {
-    padding-bottom: 1rem;
-  }
+    &:hover {
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+    }
 
-  .about-text h2 {
-    text-align: center;
-    font-size: 2rem;
-  }
+    h3 {
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin-bottom: 0.7rem;
+      color: $cor-accento;
+    }
 
-  .about-image {
-    max-width: 100%;   /* ocupa toda largura disponível */
-    margin: 0 auto 2rem;
-    height: auto !important; /* força altura automática */
-    flex-basis: auto !important; /* evita restrição de base flex */
-  }
+    p {
+      font-size: 1rem;
+      line-height: 1.4;
+      color: color.adjust($cor-texto, $lightness: -20%);
+      margin: 0;
+    }
 
-  .about-image img {
-    object-fit: contain !important; /* imagem inteira, sem corte */
-    width: 100% !important;
-    height: auto !important;
+    @media (max-width: 768px) {
+      .about-content {
+        flex-direction: column;
+      }
+
+      .about-main-card,
+      .about-cards {
+        flex: none;
+        width: 100%;
+      }
+
+      .about-cards {
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+
+      .about-card {
+        min-width: auto;
+        max-width: 100%;
+        width: 100%;
+        margin-bottom: 1rem;
+      }
+    }
   }
 }

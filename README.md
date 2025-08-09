@@ -12,17 +12,17 @@ Este é o repositório do meu portfólio profissional, desenvolvido com **React 
 
 - Layout responsivo com foco em usabilidade
 - Menu com animações e transições suaves
-- Seção "Sobre mim" com imagem e descrição animada
+- Seção "Sobre mim" com imagem e descrição
 - Cards de skills com ícones e textos descritivos
-- Carrossel de projetos em esteira contínua
-- Seção de contato com links diretos para WhatsApp, GitHub e LinkedIn
+- Seção de projetos com links do deploy
+- Seção de contato com informação de email e telefone
+- Footer com links para redes sociais e menu nav
 - Botão para baixar currículo em PDF
 
 ## 🛠️ Tecnologias Utilizadas
 
 - React + Vite
 - CSS3 / Bootstrap 5
-- AOS (Animate On Scroll)
 - React Icons
-- React Fast Marquee
+- Sass
 - Vercel (Deploy)

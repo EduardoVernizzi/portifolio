@@ -1,0 +1,156 @@
+@use 'sass:color';
+@use 'variables' as *;
+
+.footer {
+  background-color: $cor-branco;
+  color: $cor-texto;
+  padding: 3rem 2rem 1.5rem 2rem;
+  font-family: 'Fira Code', monospace;
+  border-top: 1px solid #ddd;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: 0 auto;
+    gap: 2rem;
+  }
+
+  &__about {
+    flex: 1 1 320px;
+
+    & .footer__title {
+      font-size: 1.7rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    & .footer__description {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: color.adjust($cor-texto, $lightness: 0%);
+    }
+  }
+
+  &__nav {
+    flex: 1 1 220px;
+    
+
+    & .footer__subtitle {
+      font-size: 1.7rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: color.adjust($cor-texto, $lightness: -10%);
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+
+      li {
+        margin-bottom: 0.7rem;
+
+        a {
+          color: $cor-texto;
+          text-decoration: none;
+          font-weight: 500;
+          transition: color 0.3s ease;
+
+          &:hover,
+          &:focus {
+            color: $cor-accento;
+            outline: none;
+          }
+        }
+      }
+    }
+  }
+
+  &__bottom {
+    margin-top: 2rem;
+    border-top: 1px solid #ddd; // linha separadora clara e visível
+    padding-top: 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: color.adjust($cor-texto, $lightness: -30%);
+  }
+}
+
+.links-footer {
+  display: flex;
+  justify-content: flex-start;
+  gap: 1.5rem;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+
+  a {
+    color: #0000008a !important;
+    transition: color 0.3s ease;
+
+    svg {
+      fill: currentColor;
+      transition: fill 0.3s ease;
+    }
+
+    &:hover {
+      &[aria-label='GitHub'] {
+        color: #333 !important;
+      }
+
+      &[aria-label='LinkedIn'] {
+        color: #0A66C2 !important;
+      }
+
+      &[aria-label='WhatsApp'] {
+        color: #25D366 !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .footer__container {
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center; 
+    text-align: center;
+  }
+
+  .footer__about,
+  .footer__nav {
+    flex: 1 1 100%;
+  }
+
+  .footer__nav ul {
+    padding: 0;
+    list-style: none;
+  }
+
+  .links-footer {
+    gap: 1rem;
+    justify-content: center !important;
+
+    a {
+      color: unset !important;
+      font-size: 2.5rem !important;
+      
+
+      &[aria-label='GitHub'] {
+        color: #333 !important;
+      }
+
+      &[aria-label='LinkedIn'] {
+        color: #0A66C2 !important;
+      }
+
+      &[aria-label='WhatsApp'] {
+        color: #25D366 !important;
+      }
+
+      &:hover {
+        color: inherit !important;
+      }
+    }
+  }
+}

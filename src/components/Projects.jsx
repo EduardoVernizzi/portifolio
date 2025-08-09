@@ -1,5 +1,4 @@
 import React from "react";
-import Swal from "sweetalert2";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
@@ -13,176 +12,105 @@ const projects = [
   {
     title: "Flappy Bird",
     image: projeto1,
-    description: "Clone do jogo Flappy Bird criado com JavaScript",
+    description: "Implementação de clone do clássico Flappy Bird utilizando JavaScript puro para lógica de jogo, eventos DOM e animações com requestAnimationFrame. HTML5 e CSS3 foram usados para estrutura e estilo responsivo.",
     link: "https://eduardovernizzi.github.io/projeto-flappy-bird/",
+    github: "https://github.com/eduardovernizzi/projeto-flappy-bird",
     tools: [
-      { name: "HTML5", logo: "https://cdn-icons-png.flaticon.com/512/732/732212.png" },
-      { name: "CSS3", logo: "https://cdn-icons-png.flaticon.com/512/732/732190.png" },
-      { name: "JavaScript", logo: "https://cdn-icons-png.flaticon.com/512/5968/5968292.png" }
-
+      { name: "HTML5" },
+      { name: "CSS3" },
+      { name: "JavaScript" }
     ],
-    details: "Projeto desenvolvido com JavaScript puro, HTML5 e CSS3, simulando o clássico jogo Flappy Bird."
   },
-
   {
     title: "Cadastro 360",
     image: projeto4,
-    description: "Sistema completo de cadastro e gerenciamento de pessoas",
+    description: "Sistema de cadastro e gerenciamento de usuários desenvolvido com React para interface dinâmica e Firebase como backend para autenticação, banco de dados em tempo real e hospedagem.",
     link: "https://eduardovernizzi.github.io/projeto-cadastro360/",
+    github: "https://github.com/eduardovernizzi/projeto-cadastro360",
     tools: [
-      { name: "React", logo: "https://cdn-icons-png.flaticon.com/512/919/919851.png" },
-      { name: "Firebase", logo: "https://cdn-icons-png.flaticon.com/512/906/906175.png" },
-      { name: "CSS3", logo: "https://cdn-icons-png.flaticon.com/512/732/732190.png" },
-      { name: "Bootstrap", logo: "https://cdn-icons-png.flaticon.com/512/5968/5968672.png" }
-
+      { name: "React" },
+      { name: "Firebase" },
+      { name: "CSS3" },
+      { name: "Bootstrap" }
     ],
-    details: "Sistema desenvolvido em React com backend Firebase para cadastro e gerenciamento de pessoas."
   },
   {
     title: "Trattoria Vernizzi",
     image: projeto2,
-    description: "Site profissional de um restaurante Italiano",
+    description: "Site responsivo para restaurante italiano, construído com React e Sass. Animações suaves foram implementadas usando GSAP e Framer Motion para uma experiência visual interativa e moderna.",
     link: "https://trattoria-vernizzi.vercel.app/",
+    github: "https://github.com/EduardoVernizzi/projeto-trattoria-vernizzi",
     tools: [
-      { name: "React", logo: "https://cdn-icons-png.flaticon.com/512/919/919851.png" },
-      { name: "CSS3", logo: "https://cdn-icons-png.flaticon.com/512/732/732190.png" },
-      { name: "Bootstrap", logo: "https://cdn-icons-png.flaticon.com/512/5968/5968672.png" },
-      { name: "GSAP", logo: "https://cdn-icons-png.flaticon.com/512/5968/5968371.png" },
-      { name: "Framer Motion", logo: "https://cdn-icons-png.flaticon.com/512/5968/5968381.png" },
-      { name: "Sass", logo: "https://cdn-icons-png.flaticon.com/512/5968/5968358.png" }
+      { name: "React" },
+      { name: "CSS3" },
+      { name: "Bootstrap" },
+      { name: "GSAP" },
+      { name: "Framer Motion" },
+      { name: "Sass" }
     ],
-    details: "Um site fictício com foco em criar um design elegante para um restaurante italiano."
   },
   {
     title: "Mundo Mágico",
     image: projeto3,
-    description: "Site temático inspirado em Harry Potter",
+    description: "Site temático com React e Bootstrap, focado em experiência visual inspirada em Harry Potter. Implementação inclui componentes reutilizáveis, estilização customizada e navegação responsiva.",
     link: "https://eduardovernizzi.github.io/projeto-harry/",
+    github: "https://github.com/eduardovernizzi/projeto-harry",
     tools: [
-      { name: "React", logo: "https://cdn-icons-png.flaticon.com/512/919/919851.png" },
-      { name: "CSS3", logo: "https://cdn-icons-png.flaticon.com/512/732/732190.png" },
-      { name: "Bootstrap", logo: "https://cdn-icons-png.flaticon.com/512/5968/5968672.png" },
+      { name: "React" },
+      { name: "CSS3" },
+      { name: "Bootstrap" }
     ],
-    details: "Site criado com React, CSS e Bootstrap para uma experiência visual temática e interativa."
   },
   {
     title: "TaskManager",
     image: projeto5,
-    description: "Gerenciador de tarefas",
+    description: "Aplicativo para gerenciamento de tarefas com React e Sass, consumo de APIs externas para previsão do tempo e geolocalização. Interface moderna e responsiva com estado gerenciado via hooks.",
     link: "https://vernizziTask.vercel.app/",
+    github: "https://github.com/EduardoVernizzi/projeto-taskManager",
     tools: [
-      { name: "React", logo: "https://cdn-icons-png.flaticon.com/512/919/919851.png" },
-      { name: "CSS3", logo: "https://cdn-icons-png.flaticon.com/512/732/732190.png" },
-      { name: "Sass", logo: "https://cdn-icons-png.flaticon.com/512/5968/5968358.png" }
+      { name: "React" },
+      { name: "CSS3" },
+      { name: "Sass" }
     ],
-    details: "Aplicativo de tarefas com consumo de API para previsão do tempo e geolocalização."
   },
 ];
 
 export default function Projects() {
 
-  function showDetails(proj) {
-    const logosHTML = proj.tools.map(tool =>
-      `<img src="${tool.logo}" alt="${tool.name}" title="${tool.name}" style="height:36px; margin-right:8px; border-radius:6px; box-shadow: 0 2px 6px rgba(0,0,0,0.15); background:#fff; padding:4px;">`
-    ).join("");
-
-    Swal.fire({
-      title: proj.title,
-      html: `
-        <p style="font-size:1rem; text-align:left;">${proj.details}</p>
-        <div style="margin-top:12px; display:flex; flex-wrap: wrap;">${logosHTML}</div>
-      `,
-      showCloseButton: true,
-      showConfirmButton: false,
-      width: '600px',
-      customClass: {
-        popup: 'swal2-popup',
-      }
-    });
-  }
-
   return (
-    <section id="projects" className="projects-section">
+    <section id="projects" className="projects-section container">
       <h2 className="projects-title">Projetos</h2>
-
-      <div
-        id="projectsCarousel"
-        className="carousel slide"
-        data-bs-ride="carousel"
-        data-bs-interval="5000"
-      >
-        <div className="carousel-indicators">
-          {projects.map((_, i) => (
-            <button
-              key={i}
-              type="button"
-              data-bs-target="#projectsCarousel"
-              data-bs-slide-to={i}
-              className={i === 0 ? "active" : ""}
-              aria-current={i === 0 ? "true" : undefined}
-              aria-label={`Slide ${i + 1}`}
-            ></button>
-          ))}
-        </div>
-
-        <div className="carousel-inner">
-          {projects.map((proj, i) => (
-            <div
-              key={i}
-              className={`carousel-item ${i === 0 ? "active" : ""}`}
-            >
-              <img
-                src={proj.image}
-                className="d-block w-100"
-                alt={proj.title}
-                style={{ objectFit: "cover", maxHeight: "70vh" }}
-              />
-              <div className="carousel-caption">
-                <h5>{proj.title}</h5>
-                <p>{proj.description}</p>
+      <div className="projects-grid">
+        {projects.map((proj, i) => (
+          <div className="project-card" key={i}>
+            <img src={proj.image} alt={proj.title} className="project-img" />
+            <div className="project-content">
+              <h5>{proj.title}</h5>
+              <p>{proj.description}</p>
+              <div className="tools">
+                {proj.tools.map((tool, index) => (
+                  <button key={index} type="button" disabled>
+                    {tool.name}
+                  </button>
+                ))}
+              </div>
+              <div className="buttons">
                 <button
-                  className="btn btn-warning"
+                  className="btn-view"
                   onClick={() => window.open(proj.link, "_blank")}
                 >
                   Ver Projeto
                 </button>
                 <button
-                  className="btn btn-outline-light"
-                  style={{ marginLeft: "10px" }}
-                  onClick={() => showDetails(proj)}
+                  className="btn-details"
+                  onClick={() => window.open(proj.github, "_blank")}
                 >
-                  Detalhes
+                  Código
                 </button>
               </div>
             </div>
-          ))}
-        </div>
-
-        <button
-          className="carousel-control-prev"
-          type="button"
-          data-bs-target="#projectsCarousel"
-          data-bs-slide="prev"
-        >
-          <span
-            className="carousel-control-prev-icon"
-            aria-hidden="true"
-          ></span>
-          <span className="visually-hidden">Anterior</span>
-        </button>
-
-        <button
-          className="carousel-control-next"
-          type="button"
-          data-bs-target="#projectsCarousel"
-          data-bs-slide="next"
-        >
-          <span
-            className="carousel-control-next-icon"
-            aria-hidden="true"
-          ></span>
-          <span className="visually-hidden">Próximo</span>
-        </button>
+          </div>
+        ))}
       </div>
     </section>
   );

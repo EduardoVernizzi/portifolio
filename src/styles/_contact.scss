@@ -4,96 +4,105 @@
 .contact-section {
   background-color: $cor-branco;
   color: $cor-texto;
-  margin-top: 0;
-  padding-bottom: 3rem;
+  padding: 5rem 1rem 4rem 1rem;
   text-align: center;
+  font-family: 'Fira Code', monospace;
+
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: $cor-texto;
+    font-weight: 700;
+  }
 }
 
-.contact-section h2 {
-  font-size: 2.5rem;
-  color: $cor-texto;
-  margin-bottom: 1rem;
-  font-weight: 700;
-  text-align: center;
-}
-
-.contact-section p {
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
-  color: color.adjust($cor-texto, $lightness: -10%);
-}
-
-.social-links {
+.contact-cards-container {
   display: flex;
   justify-content: center;
-  gap: 1.5rem;
-  font-size: 2.5rem;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: left;
 }
 
-.social-links a {
-  color: $cor-accento;
-  transition: color 0.3s ease;
+.contact-card {
+  background: rgba(74, 144, 226, 0.1);
+  border-radius: 16px;
+  padding: 2.5rem 2rem;
+  color: $cor-texto;
+  flex: 1 1 400px;
+  min-height: 250px;
 
-  &:hover,
-  &:focus {
-    color: $cor-accento-claro;
+  h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: $cor-accento;
+  }
+}
+
+.why-choose {
+  ul {
+    list-style-type: disc;
+    padding-left: 1.6rem;
+    font-size: 1.15rem;
+    line-height: 1.6;
+    color: $cor-texto;
+
+    li {
+      margin-bottom: 0.7rem;
+    }
+  }
+}
+
+.contact-info-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+
+  .info-item {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    font-size: 1.15rem;
+    color: $cor-accento;
+
+    .icon {
+      font-size: 1.3rem;
+      color: $cor-accento;
+      flex-shrink: 0;
+    }
+
+    a,
+    span {
+      color: $cor-texto;
+      text-decoration: none;
+      transition: color 0.3s ease;
+      word-break: break-word;
+    }
+
+    a:hover,
+    a:focus {
+      color: color.adjust($cor-accento, $lightness: 20%);
+      outline: none;
+    }
   }
 }
 
 @media (max-width: 768px) {
-  .contact-section {
-    padding: 0 1rem 3rem 1rem;
+  .contact-cards-container {
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 100%;
   }
 
-  .contact-section h2 {
-    font-size: 2.5rem;
-  }
-
-  .social-links {
-    font-size: 2rem;
-    gap: 1rem;
-  }
-
-  a {
-    // No mobile/tablet a cor base já é a cor da rede social
-    color: unset !important; // remove o cinza do desktop
-
-    &[aria-label='GitHub'] {
-      color: #333 !important;
-    }
-
-    &[aria-label='LinkedIn'] {
-      color: #0A66C2 !important;
-    }
-
-    &[aria-label='WhatsApp'] {
-      color: #25D366 !important;
-    }
-
-    // Remove o hover porque não tem efeito no mobile, mas pode manter para desktop
-    &:hover {
-      color: inherit !important;
+  .why-choose {
+    h3{
+      font-size: 1.6rem;
     }
   }
-}
 
-.resume-download {
-  margin-top: 2rem;
-  display: flex;
-  justify-content: center;
-}
-
-.resume-button {
-  background-color: $cor-accento;
-  color: $cor-branco;
-  padding: 0.6rem 1.5rem;
-  border-radius: 30px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
-
-  &:hover,
-  &:focus {
-    background-color: $cor-accento-claro;
+  .contact-card {
+    min-height: auto;
   }
 }
