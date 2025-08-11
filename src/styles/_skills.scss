@@ -5,74 +5,117 @@
   background-color: $cor-branco;
   padding: 5rem 1rem 4rem 1rem;
   color: $cor-texto;
+  font-family: 'Fira Code', monospace;
   text-align: center;
-  font-family: 'Fira Code', monospace;
-}
 
-.skills-container {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 1rem;
-}
-
-.skills-section .skills-container h2 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  font-family: 'Fira Code', monospace;
-  color: $cor-texto;
-  margin-bottom: 2.5rem;
+  h2 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+  }
 }
 
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  gap: 2rem;
+  gap: 2.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
 .skill-card {
   background-color: $cor-fundo;
   border-radius: 12px;
-  padding: 1.5rem 1rem;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border-top: 4px solid $cor-accento;
+  padding: 2rem 1.5rem;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.07);
+  border-top: 5px solid $cor-accento;
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100%;
-}
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
 
-.skill-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-}
+  animation: fadeInUp 0.6s ease forwards;
+  opacity: 0;
 
-.skill-img {
-  width: 70px;
-  height: 70px;
-  object-fit: contain;
-  margin-bottom: 1rem;
-}
-
-.skill-card h3 {
-  font-size: 1.2rem;
-  color: $cor-texto;
-  margin-bottom: 0.5rem;
-}
-
-.skill-card p {
-  font-size: 0.95rem;
-  color: color.adjust($cor-texto, $lightness: -20%);
-  text-align: center;
-  max-width: 300px;
-}
-
-@media (max-width: 768px) {
-  .skills-section .skills-container h2 {
-    font-size: 2rem;
+  img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 1.2rem;
+    filter: drop-shadow(0 1px 3px rgba(0,0,0,0.12));
   }
 
-  .skill-card p {
-    font-size: 0.9rem;
+  h3 {
+    font-size: 1.3rem;
+    color: $cor-texto;
+    margin-bottom: 0.6rem;
+  }
+
+  p {
+    font-size: 1rem;
+    color: color.adjust($cor-texto, $lightness: -20%);
+    text-align: center;
+    line-height: 1.5;
+  }
+
+  &:hover,
+  &:focus {
+    transform: translateY(-8px) scale(1.05);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsivo - Mobile */
+@media (max-width: 768px) {
+  .skills-section {
+    padding: 4rem 1rem 3rem 1rem;
+
+    h2 {
+      font-size: 2.4rem;
+      margin-bottom: 2.5rem;
+    }
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 1.8rem;
+    max-width: 320px;
+  }
+
+  .skill-card {
+    padding: 1.2rem 1rem;
+
+    img {
+      width: 50px;
+      height: 50px;
+      margin-bottom: 0.8rem;
+    }
+
+    h3 {
+      font-size: 1.1rem;
+      margin-bottom: 0.4rem;
+    }
+
+    p {
+      font-size: 0.95rem;
+    }
+
+    &:hover,
+    &:focus {
+      transform: none;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.07);
+    }
   }
 }
