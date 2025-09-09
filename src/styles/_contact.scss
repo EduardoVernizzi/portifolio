@@ -96,27 +96,30 @@
     max-width: 100%;
   }
 
-  h2{
+  h2 {
     font-size: 2rem !important;
   }
 
-  h3{
+  h3 {
     font-size: 1.2rem !important;
     text-align: center;
   }
 
-  .info-item a, span{
+  .info-item a,
+  span {
     font-size: 0.9rem;
+    color: $cor-texto !important;
   }
 
   .why-choose {
-    h3{
+    h3 {
       font-size: 1.2rem !important;
       text-align: center;
     }
 
-    li{
+    li {
       font-size: 0.9rem !important;
+
     }
 
   }
