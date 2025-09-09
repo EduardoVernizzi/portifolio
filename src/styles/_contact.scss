@@ -111,8 +111,14 @@
 
   .why-choose {
     h3{
-      font-size: 1.6rem;
+      font-size: 1.2rem !important;
+      text-align: center;
     }
+
+    li{
+      font-size: 0.9rem !important;
+    }
+
   }
 
   .contact-card {
