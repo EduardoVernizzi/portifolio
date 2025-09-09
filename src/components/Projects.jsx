@@ -7,6 +7,7 @@ import projeto2 from "../assets/trattoria.png";
 import projeto3 from "../assets/harry.png";
 import projeto4 from "../assets/cadastro360.png";
 import projeto5 from "../assets/taskManager.png";
+import projeto6 from "../assets/MinimalAPI.png";
 
 const projects = [
   {
@@ -70,7 +71,23 @@ const projects = [
     tools: [
       { name: "React" },
       { name: "CSS3" },
-      { name: "Sass" }
+      { name: "Sass" },
+      { name: "API" }
+    ],
+  },
+  {
+    title: "Minimal API",
+    image: projeto6,
+    description: "Projeto de API minimalista em .NET 8 para gerenciamento de veículos, com autenticação JWT para administradores e documentação interativa via Swagger/OpenAPI.",
+    link: "https://www.linkedin.com/posts/carlosvernizzi_dotnet-minimalapi-backend-activity-7371271966667919360-Iku5?utm_source=share&utm_medium=member_desktop&rcm=ACoAACRd-AIB9KFOGPJy4aCVBGwvxefj6KKuipM",
+    github: "https://github.com/EduardoVernizzi/minimal-api",
+    tools: [
+      { name: ".NET" },
+      { name: "C#" },
+      { name: "Swagger" },
+      { name: "EF Core" },
+      { name: "MySql" },
+      { name: "JWT" },
     ],
   },
 ];
