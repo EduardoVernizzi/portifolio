@@ -140,12 +140,9 @@
     font-size: 1.2rem;
   }
 
-  .nome-principal{
-    font-size: 1.2rem;
-  }
 
   .menu-toggle{
-    font-size: 1.3rem;
+    font-size: 1.5rem;
   }
 
   .nav-desktop {
@@ -157,8 +154,13 @@
     display: block !important;
   }
 
-  .nome-principal span {
-    color: $cor-accento !important;
+  .nome-principal {
+    font-size: 1.4rem !important;
+
+    span {
+      font-size: 1.4rem !important; // se quiser manter o span proporcional
+      color: $cor-accento !important;
+    }
   }
 }
 
